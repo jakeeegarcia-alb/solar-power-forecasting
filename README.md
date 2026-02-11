@@ -46,9 +46,8 @@ Reference:
 ### Day-Ahead Forecasting Setup
 The task was formulated as:
 
-\[
-\text{Predict } \mathrm{GHI}(t+24) \text{ using information available at time } t
-\]
+**Forecast objective:** predict **GHI at (t + 24 hours)** using only information available at time **t**.
+
 
 This removes short-term persistence effects and forces the model to generalize across days.
 
@@ -73,9 +72,9 @@ No shuffling was used.
 ### Baseline
 A persistence baseline was defined as:
 
-\[
-\hat{y}(t) = \mathrm{GHI}(t)
-\]
+**Persistence baseline:** ŷ(t) = GHI(t)  
+(i.e., tomorrow’s irradiance ≈ today’s irradiance at the same hour)
+
 
 i.e., tomorrow’s irradiance is assumed equal to today’s irradiance at the same hour.
 
@@ -97,13 +96,13 @@ Random Forest achieved the best performance by capturing nonlinear interactions 
 
 Forecasted GHI was converted into PV power using a simplified fixed-efficiency model:
 
-\[
-P(t) = \eta \cdot A \cdot \mathrm{GHI}(t)
-\]
+**PV power model (simplified):** P(t) = η × A × GHI(t)  
+where η is PV efficiency and A is panel area.
+
 
 where:
-- \( \eta \) is assumed PV efficiency
-- \( A \) is panel area
+- η is assumed PV efficiency
+- A is panel area
 
 Hourly power was aggregated into daily energy (kWh) to evaluate forecast impact at an energy-relevant timescale.
 
@@ -146,8 +145,18 @@ Repository Structure
 ---
 
 ## References
-
-- National Renewable Energy Laboratory (NREL), NSRDB  
+- National Renewable Energy Laboratory (NREL). **National Solar Radiation Database (NSRDB)**  
   https://nsrdb.nrel.gov/
-- SolarAnywhere variable definitions  
+
+- Perez, R., et al. (2013). *Validation of the National Solar Radiation Database (NSRDB).*  
+  Solar Energy, 93, 121–132.
+
+- Lorenz, E., et al. (2014). *Regional photovoltaic power prediction for improved grid integration.*  
+  IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing.
+
+- Yang, D., et al. (2015). *Solar irradiance forecasting using time-series and machine learning methods.*  
+  Renewable and Sustainable Energy Reviews, 44, 676–686.
+
+- SolarAnywhere. *Solar Irradiance Data Field Definitions*.  
+  Clean Power Research.  
   https://www.solaranywhere.com/support/data-fields/definitions/
