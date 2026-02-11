@@ -1,3 +1,6 @@
+## Full Notebook
+
+👉 [Open the full analysis notebook](solar_notebook.html)
 ---
 
 ## Figures
