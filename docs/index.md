@@ -11,6 +11,7 @@ Feature importance analysis indicates that clear-sky irradiance and diurnal/seas
 To assess operational relevance, irradiance forecasts were converted into photovoltaic (PV) power and daily energy yield using a simplified fixed-efficiency PV model. This conversion demonstrates that even moderate improvements in irradiance forecast skill translate into meaningful differences in estimated daily energy production, while also illustrating the limits imposed by atmospheric variability.
 
 Overall, this project demonstrates a **physically consistent, leakage-free, and operationally realistic approach to day-ahead solar forecasting**, providing a transparent benchmark for evaluating machine-learning models in renewable energy applications.
+
 ---
 ## Full Notebook
 
