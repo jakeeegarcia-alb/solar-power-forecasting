@@ -1,4 +1,4 @@
----
+
 # Summary
 Accurate day-ahead forecasts of solar energy availability are essential for grid operations, energy trading, and renewable integration, particularly in regions with strong cloud-driven variability. In this project, I developed a **day-ahead solar irradiance forecasting pipeline** using hourly data from the National Solar Radiation Database (NSRDB) for Metropolitan Manila, Philippines, and evaluated its performance against a meaningful persistence baseline.
 
